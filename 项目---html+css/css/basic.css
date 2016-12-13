@@ -1,0 +1,135 @@
+body,h1,ul,h2,p,figure,h3 {
+	margin: 0;
+	padding: 0;
+}
+a {
+	color: #eee;
+	text-decoration: none;
+}
+
+.center ul{
+	width: 50%;
+	list-style: none;
+	float: right;
+	height: 70px;
+	color: #eee;
+}
+
+#header {
+	width: 100%;
+	min-width: 1263px;
+	height: 70px;
+	background-color: #333;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.3);
+	position: relative;
+	z-index: 9999;/*显示阴影*/
+}
+
+#header .center {
+	width: 1263px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+.link {
+	width: 1263px;
+	height: 70px;
+	margin: 0 auto;
+}
+
+#header h1 {
+	width: 240px;
+	height: 70px;
+	background-image: url(../img/head.png);
+	text-indent: -9999;/*隐藏字体*/
+	float: left;
+}
+
+.link li {
+	float: left;
+	line-height: 70px;
+	width: 120px;
+	text-align: center;;
+}
+
+.link ul>li>a {
+	display: block;
+}
+.link ul>li>a:hover, .link ul>li.active {
+	background: #000;
+}
+
+
+
+
+#footer {
+	width: 100%;
+	min-width: 1263px;
+	height: 360px;
+	background: #222;
+	clear: both;  /*清理浮动*/
+
+}
+
+
+#footer .top {
+	width: 1263px;
+	height: 280px;
+
+	margin: 0 auto;
+	text-align: center;
+}
+
+#footer .block {
+	width: 410px;
+	height: 280px;
+	display: inline-block;
+	color: #ccc;
+	text-align: left;
+	/*background-color: green;*/
+	vertical-align: top;/*强制居顶部*/
+}
+
+#footer h2 {
+	padding: 20px 0 0 20px;
+	font-weight: normal;
+	font-size: 24px;
+
+}
+#footer hr {
+	width: 90%;
+	border: 1px dashed #333;
+}
+
+#footer ul{
+	list-style: none;
+	padding-left: 20px;
+	font-size: 18px;
+	color: #777;
+	line-height: 2;
+	cursor: pointer;
+}
+
+#footer .bottom {
+	height: 80px;
+	line-height: 80px;
+	color: #777;
+	text-align: center;
+	border-top: 1px solid #444;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

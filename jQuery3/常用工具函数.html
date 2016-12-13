@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// var str = '   abc';
+			// alert(str.length);
+			// alert($.trim(str).length);  //去除字符串中的空格
+
+
+			// var array = ["a","b","c","d"];
+			// // jQuery中的遍历
+			// $.each(array,function(index,value){//第一个参数带包遍历的对象，index代表遍历数值的位置，value代表值
+			// 	$("#box").html($("#box").html()+index+":"+value+"<br>");
+			// })
+
+
+			// var newArray = [1,2,3,4,66,77];
+			// // 数组中的过滤
+			// var array = $.grep(newArray,function(element,index){
+			// 	return index < 5 && element > 3; 
+			// })
+			// alert(array)
+
+
+			// 修改数组种的数据
+			// var newArray = [1,2,3,4,66,77];
+			// var array = $.map(newArray,function(element,index){
+			// 	return element + 1; 
+			// })
+			// // alert(array)
+			// // alert($.inArray(4,newArray));//找到newArray中4的位置
+			// // alert($.merge(newArray, array));     //数组的合并
+			// var secondArray = $.merge(newArray, array);
+			// alert(secondArray);
+			// alert($.unique(secondArray)); //去掉重复的元素
+
+
+			// alert($.unique([1,1,1,3,4,4,55,55]));
+
+
+			var arr = [1,2,3,4];
+			// alert($.isArray(arr));//判断是否是数组
+
+			// var fun = function(){}
+			// alert($.isFunction(fun));//判断是否是函数
+
+			alert($.type(arr));//判断一个元素的类型
+
+
+
+		})
+	</script>
+
+</head>
+<body>
+	<div id="box"></div>
+</body>
+</html>

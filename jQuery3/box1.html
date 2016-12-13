@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script type="text/javascript" src="../jquery-3.1.1.js"></script>
+<script type="text/javascript">
+	$(function(){
+		// $(".hide").click(function(){
+		// 	$(".box").hide("slow");
+		// })
+		// $(".show").click(function(){
+		// 	$(".box").show("fast");
+		// })
+		// $(".toggle").click(function(){
+		// 	$(".box").toggle(2000,function(){//回调函数
+		// 		alert("动画完成");
+		// 	});		
+		// })
+
+
+
+		// $(".show").click(function(){
+		// 	$(".box").eq(0).show("fast",function(){
+		// 			$(".box").eq(1).show("fast",function(){
+		// 				$(".box").eq(2).show("fast",function(){
+		// 			});
+		// 		});
+		// 	});
+		// })
+
+		// $(".show").click(function(){  //运用递归
+		// 	$(".box").first().show("fast",function test(){
+		// 		$(this).next().show("fast",test)
+		// 	})
+		// })
+
+		$(".hide").click(function(){  
+			$(".box").slideUp();//向上隐藏
+		})
+		$(".show").click(function(){  
+			$(".box").slideDown();//向下显示
+		})
+		$(".toggle").click(function(){  
+			$(".box").slideToggle();//交替显示，用法同上
+		})
+
+		$(".box").fadeIn("slow",function(){});
+		$(".box").fadeOut("slow",function(){});
+		$(".box").fadeToggle("slow",function(){});
+
+	})
+</script>
+<body>
+	<input type="button" class="hide" value="hide">
+	<input type="button" class="show" value="show">
+	<input type="button" class="toggle" value="toggle">
+	<div class="box" style="height: 100px;width: 200px;background: red; ">hello</div>
+	<div class="box" style="height: 100px;width: 200px;background: red; ">uplooking</div>
+	<div class="box" style="height: 100px;width: 200px;background: red; ">haha</div>
+</body>
+</html>

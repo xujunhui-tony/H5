@@ -1,0 +1,141 @@
+
+#search {
+	width: 100%;
+	min-width: 1263px;
+	height: 600px;
+	background: url(../img/search.jpg) no-repeat center;
+	position: relative;
+}
+
+#search .center {
+	width: 600px;#
+	height: 60px;
+	background: #000;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -30 0 0 -300;
+	opacity: 0.5;
+	border-radius: 10px;
+}
+
+#search .search {
+	width: 446px;
+	height: 52px;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -27 0 0 -296;
+	border-radius: 10px;
+	color: #666;
+	border: 1px solid #666;
+	border-radius: 10px;
+	font-size: 24px;
+	padding:0 10px;
+}
+
+#search .button {
+	width: 120px;
+	height: 54px;
+	background: #fff;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -27 0 0 175;
+	border-radius: 10px;
+	color: #666;
+	border: 1px solid #666;
+	border-radius: 10px;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+#tour {
+	width: 1263px;
+	height: 1150px;
+	margin: 0 auto;
+	/*background: #ccc;*/
+	text-align: center;
+}
+
+
+#tour .center h2 {
+	font-size: 45px;
+	letter-spacing: 2px;
+	color: #666;
+	margin: 10px 0;
+}
+
+#tour .center p  {
+	color: #666;
+	margin: 10px 0;
+}
+
+#tour figure {
+	border: 1px solid #ddd;
+	display: inline-block;
+	padding: 4px;
+	border-radius: 5px;
+	margin: 15px 12px;
+	width: 380px;
+	text-align: left;
+	position: relative;
+}
+
+#tour figure img {
+	/*vertical-align: middle;*/
+}
+
+
+#tour figcaption {
+	color: #777;
+	line-height: 1.5;
+	letter-spacing: 1px;
+	font-size: 14px;
+	padding: 7px 0 5px 0;
+}
+
+.title {
+	color: #333;
+	font-weight: normal;
+}
+
+.sat {
+	float: right;
+	color: #999;
+	font-style: normal;
+}
+.price {
+	text-align: right;
+	color: #f60;
+	letter-spacing: 1px;
+}
+
+
+#tour .type {
+	background: #59b200;
+	width: 90px;
+	height: 25px;
+	line-height: 25px;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	top: 4px;
+	left: 4px;
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

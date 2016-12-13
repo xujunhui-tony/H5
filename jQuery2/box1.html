@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="box.css">
+	<style type="text/css">
+		.box{
+			color: green;
+		}
+		.pox {
+			background: red;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// alert($("#box").html());//获得html内容，包括标签
+			// $("#box").html('<em>hello</em>') //设置html内容，会覆盖掉原来的内容
+			// alert($("#box").text()); //获取文本内容，不包含标签
+			// $("span").text("<em>这是新的内容</em>");//更改文本内容
+			// alert($("input").val());  //获得表单中文本内容
+			// $("input").val('hehe');  //更改表单中的文本内容
+			// $("input").val(['男','上学']);//默认选择表单的value
+
+
+
+			// alert($("div").attr('id'));  //获取属性值
+			// $("div").attr('title', 'hehe');  //设置属性值
+			// $("div").attr({"class": 'box',"title": 'hello'});//设置多个属性，不建议设置class和id
+			// $("div").attr("title",function(index,value){
+			// 	return '这是title'+index+value;
+			// });//index代表是哪个div,value代表是之前的属性title的值
+			// $("div").removeAttr("title");//删除属性
+
+
+			// alert($("#box").css("color"));//获取元素的css样式的值
+			// $("#box").css("color","blue") //设置元素的CSS样式的值，优先级比较高
+			// 获取元素的多个CSS样式的值
+			// var box = $("#box").css(['width','height','color']);
+			// for (var i  in box) {//js方式遍历
+			// 	alert(i+':'+box[i]);
+			// }
+			// $.each(box,function(attr,value){  //jQuery方式遍历
+			// 	alert(attr+':'+value);
+			// })
+			// $("#box").css("color","red").css("height","100");//给一个元素设置多个CSS样式
+			// $("#box").css({"color":"blue","width":"100px","height":"100px;"})//设置多个css样式，第二种方式
+			// $("div").css('width',function(index,value){//index代表div的索引，在原来的属性值上加值
+			// 	if (index==0) {
+			// 	return parseInt(value)+200+'px';
+			// 	}
+			// });
+
+
+			// CSS样式操作2
+			// $("div").addClass("box box1");  //给div添加一个类，样式写在css样式里面
+			// $("div").removeClass("box");//删除一个类
+			// $("div").toggleClass('box');//样式切换,用点击事件可以测试
+			// $("div:nth-child(2)").click(function() {
+			// 	$("div:nth-child(2)").toggleClass('pox');
+			// });
+
+
+			// 获取CSS宽度
+			// alert($("div:first").css("width"));
+			// alert($("div:first").width());
+			// $("div:first").width(function(index,value){//index代表div索引,value代表原来的值
+			// 	return value+300;
+			// })
+			// alert($("div").innerWidth());//加上内边距的宽
+			// alert($("div").outerWidth(true));//加上内外边距的宽
+
+			// //div当前位置 距离原点
+			// alert($("div").offset().left);
+			// alert($("div").offset().top);
+			// // 相对于父元素的坐标  要给父元素进行定位
+			// alert($("span").position().left);
+			// alert($("span").position().top);
+
+			// alert($(window).scrollTop());//滚动到距顶部的距离
+			// $(window).scrollTop(0);//移动到顶端
+
+
+			// 创建节点，插入节点
+			// var fox = $("<div id='fox'></div>");//创建一个节点
+			// $('body').append(fox);//插入到body标签的后面
+			// $('p').append(function(index,html){ //index代表p标签索引，html代表之前的内容
+			// 	return "<strong>拼接内容</strong>"+html;
+			// });
+			// $("span").appendTo("p");  //把span标签拼接到p标签的后面
+
+			// $("body").prepend("<p>新加的段落</p>");//添加到标签的后面，用法同上
+
+			// $("p").after('<span>兄弟节点</span>');//在后面新增加一个兄弟节点
+			// $("p").after(function(index,html){
+			// 	return '<span>兄弟节点</span>';
+			// })
+			// $("p").before("<span>兄弟节点</span>");//在前面新增加一个兄弟节点，用法同上
+
+			// $("span").insertAfter("p");//把span标签放到p标签的后面
+			// $("span").insertBefore("p");//把span标签放到p标签的前面
+
+
+			// $("p").wrap("<div></div>");//在p标签的外面加一个包裹一个div标签
+			// $("p").wrap("<div>");//如果没有内容的话，效果同上
+			//  $("p").wrap("<div>abc</div>");//在p标签的外面加一个包裹一个div标签,abc在div后面
+ 		// 	$("p").wrap("<div><em>abc</em></div>");
+ 		// 	$("p").unwrap();   //移除包裹，每次移除一层，紧挨着的一层
+ 		// 	$("p").wrapAll('<strong></strong>');//把所有的p标签包裹在一块
+			// $("p").wrapInner('<strong></strong>');//内部包裹一个标签
+			// $("p").clone().appendTo('body');//克隆一个p标签，拼接到body的后面
+			// $("p").clone(true).appendTo('body');//true代表拷贝事件，比如点击事件
+			// $("p").remove();//移除所有的p节点
+			// $("p").remove().appendTo("body");//移除之后再添加，不会把之前的操作事件也给添加上
+			// $("p").detach().appendTo("body");//删除之后再添加，事件依然存在
+			// $("p").empty();//清除p标签元素的内容
+			// $("p").replaceWith('<div></div>');//把p标签替换成div标签,整体替换
+
+			
+
+
+			
+		});
+	</script>
+</head>
+<body>
+
+<p>这是一个段落</p>
+
+<div id="box" style="position: absolute;">
+	<span>hello uplooking</span>
+</div>
+<!-- <div style="width: 100px;" class="box">hahahhahha</div> -->
+
+<input type="text" value="hello uplooking">
+<input type="radio" value="男">
+<input type="radio" value="女">
+<input type="checkbox" value="上学">
+
+</body>
+</html>

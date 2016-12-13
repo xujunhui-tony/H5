@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery-3.1.1.js"></script>
+</head>
+<body>
+	<button>按钮</button>
+	<div id="box" style="width: 200px;height: 200px;background: red;">
+		<div style="width: 100px;height: 100px;background: blue;"></div>
+	</div>
+	<span></span>
+	<div>
+		<input type="text">
+	</div>
+	
+</body>
+
+<script type="text/javascript">
+	$(function(){
+
+		// 事件绑定
+		// $("button").bind('click',function(){
+		// 	alert(111);
+		// });// bind()是jQuery专门用来事件绑定的，第一个参数代表事件名称，第二个参数代表事件
+		// $("button").bind('mouseover mouseout',function(){
+		// 	alert('移动');
+		// });
+
+		// $("button").bind({  //添加不同的事件
+		// 	mouseover:function(){
+		// 		alert("mouseover");
+		// 	},
+		// 	mouseout:function() {
+		// 		alert("mouseout");
+		// 	}			
+		// });
+
+		// // 解绑
+		// $("button").unbind();//移除所有的绑定事件
+		// $("button").unbind("mouseout");//移除指定绑定事件
+
+		// $(window).resize(function(){  //当窗口大小变化的时候触发事件
+		// 	alert(11);
+		// })
+		// $(window).scroll(function(){  //当窗口滚动的时候触发事件
+		// 	alert(11);
+		// })
+
+		// $("input").select(function(){  //选中输入框里面的内容时
+		// 	alert();
+		// })
+		// $("input").change(function(){  //更改输入框里面的内容，回车触发
+		// 	alert();
+		// })
+		// $("form").submit(function(){//点击表单的提交按钮触发的事件
+		// 	alert("点击提交");
+		// })
+
+
+
+		// 复合事件
+		// $("#box").mouseover(function(){
+		// 	$(this).css('background', 'green');
+		// }).mouseout(function() {
+		// 	$(this).css('background','blue');
+		// });
+
+		// $("#box").mouseenter(function() {//区别mouseover
+		// 	$("span").html(function(index,value){
+		// 		return value+1;
+		// 	})
+		// })
+
+		// $("input").keydown(function() {
+		// 	alert("按下");
+		// });
+
+		// $("input").keypress(function() {
+		// 	alert("按下");
+		// });
+
+		// $("input").focus(function() {
+		// 	alert("获得焦点");
+		// });
+
+		// $("input").blur(function() {
+		// 	alert("失去焦点");
+		// });
+		// $("div").focusin(function() {//父元素为div
+		// 	alert("获得焦点");
+		// });
+		// $("div").focusout(function() {//父元素为div
+		// 	alert("失去焦点");
+		// });
+
+
+
+	})
+</script>
+
+
+
+
+
+</html>

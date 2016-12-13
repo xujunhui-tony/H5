@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../jquery-3.1.1.js"></script>
+</head>
+<body>
+	<button>按钮</button>
+</body>
+
+<div style="width: 200px;height: 200px;background: red;">
+	<span style="width:100px;height:100px;display: block;background: green;"></span>
+	<a href="http://www.baidu.com">百度</a>
+</div>
+<input type="button" value="按钮">
+
+<div class="box" style="width: 300px;height: 200px;background: red;">
+	<input type="button" class="button" value="button">
+	<input type="button" class="button" value="button">
+	<input type="button" class="button" value="button">
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		
+
+		// 事件对象
+		$("button").bind('click', function(event) {
+			// alert(event.type);//获得绑定事件类型的字符串名称
+			// alert(event.target);  //获得触发元素的DOM对象
+			// alert(event.currentTarget);// 获取监听元素的DOM对象，等同于this
+		});
+
+		// $("div").bind('click',function(event){
+		// 	alert(event.target);  //currentTarget区别
+		// 	alert(event.currentTarget);
+		// })
+
+		// $("div").bind('mouseover',function(event){
+		// 	alert(event.relatedTarget);  // 事件之前的上一个DOM对象
+		// })
+
+		// $("div").bind('mouseout',function(event){
+		// 	alert(event.relatedTarget);  // 事件下一个DOM对象
+		// })
+		
+		// $("button").bind('click',111,function(event){
+		// 	// alert(event.data);   //获得参数的内容，可以传任何数值
+		// 	// alert(event.timeStamp);   //事件触发的时间戳
+		// });
+
+		// $(document).bind('click',function(event){
+		// 	alert(event.pageX);  //获取相对于页面原点的坐标
+		// 	alert(event.screenX);  //获取相对于显示器原点的坐标(非jQuery封装)
+		// 	alert(event.clientX);  //获取相对于视口的坐标
+		// 	alert(event.which);//鼠标左右键和滚轮(132)
+		// 	alert(event.shiftKey);//  是否按下shift点击
+		// 	alert(event.altKey);
+		// 	alert(event.ctrlKey);
+		// 	alert(event.metaKey);    command
+		// })
+
+
+
+		// 事件对象2
+		// 事件冒泡，子元素与父元素绑定相同的事件，激发子元素的事件，会连带父元素相同的事件也被激发，
+		// $("div").bind("click",function(event){
+		// 	event.stopPropagation();  //阻止事件传递 
+		// 	alert("div");
+		// })
+		// $("span").bind("click",function(event){
+		// 	event.stopPropagation();
+		// 	alert("span");
+		// })
+		// $(document).bind("click",function(){
+		// 	alert("document");
+		// })
+
+		// $("a").bind("click",function(event){
+		// 	event.preventDefault();//阻止默认行为
+		// 	alert("baidu");
+		// 	alert(event.isDefaultPrevented());//是否调用了阻止默认行为的方法
+		// 	alert(event.isPropagationStopped());//是否调用了阻止事件传递的方法
+		// 	return false;   //阻止默认行为和事件传递
+		// })
+
+
+		$("input").click(function(){
+			alert('click button');
+		})
+		$("input").trigger("click");//浏览器模拟点击事件
+		也可以简写模拟事件
+
+		$("input").click(function(event,v1,v2){
+			alert(v1+":"+v2);
+		}).trigger("click",["123",444]);//中括号不代表数组，仅仅代表多个参数
+
+		$(".button").bind("click",function(){
+			alert("hehehe");
+		})
+		$(".box").bind("click",function(){
+			alert("hehehe");
+		})
+
+		// 找到父元素下的特定子元素
+		$(".box").on("click",".button",function(){
+			alert("hehe");
+		})
+
+		// 只执行一次
+		$(".box").one("click",".button",function(){
+			alert("hehe");
+		})
+
+	})
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/**/
+	</style>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			// $("#box p").css("color","red");
+			// $("#box").find("p").css("color","red");
+			// $("#box>p").css('color', 'red');
+			// $("#box").children("p").css("color","red");//
+
+
+			// 过滤器
+			// $("li:first").css("color","red");   //第一个
+			// $("li:last").css("color","red");   //最后一个
+			// $("#box li:last").css("background","red");//第一块的最后一个
+			// $("ul:first li:last").css("background","green");//第一块最后一个
+			// $("li:not(.red)").css("color","red"); //反选
+			// $("li:even").css("color","red");   //偶数，从0开始
+			// $("li:odd").css("color","red");   //奇数，从0开始
+			// $("li:eq(3)").css("color","red");   //第三个
+			// $("li:gt(3)").css("color","red");   //大于3
+			// $("li:lt(3)").css("color","red");   //小于3
+			// $(":header").css("color","red");   //所有标题
+			// $("h1:header").css("color","red");   //h1标题
+			// $("div:first h1:header").css("color","red");   //第一个块里面的h1
+
+			// $("input").get(0).focus();
+			// $(":focus").css("background","red");   //首先要获得焦点
+
+
+
+			//内容过滤器
+			// $("div:contains('contain内容')").css("background","red");//找到有“contain内容"的div
+			// $("div:empty").css("background","red").height(200);//不包含任何子标签或者内容的元素
+			// $("ul:has(.red)").css("background","green");//选取含有class是red的元素，返回值是父元素(ul)
+			// $("div:parent").css("background","red").height(200);//跟empty相反，选取有子元素或者是文本的元素
+			// $("ul").has(".red").css("background","red");//简单应用
+			// $("p").parent().css("background","red"); //用法跟前面相反
+			// $("p").parents().css("background","red");//所有的父元素
+			// $("p").parentUntil("body").css("background","red");//所有的父元素一直到body
+
+			// 子元素过滤器
+			// $('li:first').css('background','red');//全部li的第一个
+			// $('li:first-child').css('background','red');//每个父元素中的第一个li
+			// $('li:last').css('background','red');//同上
+			// $('li:last-child').css('background','red');//同上
+			// $('li:only-child').css('background','red');//只有一个子元素的元素
+			// $('li:nth-child()').css('background','red');//获取每个自定义元素的元素，even代表偶数，odd代表奇数，从一开始
+
+
+
+			// 过滤器常用方法
+			// $(".red").is("li");//判断li里面是否有class red属性
+			// alert($(".red").is($("li").get(1)));//判断red是否在第二个li里面
+			// alert($("li").eq(1).hasClass("red"));  //同上
+			// $("li").slice(0,2).css('background', 'red');//从第0到第二个，如果只有一个参数，代表从这个参数到最后
+			// $("div").contains();//取某元素下的所有元素节点，包括文本节点
+			// $("li").filter(".red,:first-child").css('background', 'green');//过滤
+			
+
+
+
+
+
+
+		})
+	</script>
+</head>
+<body>
+<!-- <div id="box">
+	<div>
+		<p>1</p>
+		<p>2</p>
+		<p>3</p>
+		<p>4</p>
+		<p>5</p>
+		<div>
+			<p>一</p>
+			<p>二</p>
+			<p>三</p>
+			<p>四</p>
+		</div>
+	</div>
+</div> -->
+
+
+
+<ul id="box">
+	<li>列表</li>
+	<li class="red">列表</li>
+	<li>列表</li>
+	<li class="red">列表</li>
+</ul>
+
+<ul>
+	<li>列表</li>
+	<li>列表</li>
+	<li>列表</li>
+	<li>列表</li>
+</ul>
+
+<h1>标题</h1>
+<h2>标题</h2>
+用户名<input type="text">
+<div>contain内容</div>
+<div></div>
+
+	
+</body>
+</html>

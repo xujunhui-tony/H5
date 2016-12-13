@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	</style>
+	<script type="text/javascript" src="../jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".button").click(function(){
+				$(".box").animate({
+					width:"300px",
+					height:"300px",
+					opacity:0.5
+				});
+			})
+
+			$(".button").click(function(){
+				$(".box").animate({
+					// 每次点击都会向右移动100px
+					left:"+=100px"   
+				});
+			})
+
+			// 动画叠加 第一种方法
+			$(".button").click(function(){
+				$(".box").animate({width:"300px"},function(){
+					$(".box").animate({height:"300px"},function(){
+						$(".box").animate({fontSize:"30px"},function(){
+							$(".box").animate({opacity:0.5},function(){
+							
+							})
+						})
+					})
+				})
+			})
+
+			// 连缀
+			$(".button").click(function(){
+				$(".box").animate({width:"300px"})
+				.animate({height:"300px"})
+				.animate({fontSize:"30px"})
+				.animate({opacity:0.5});
+			})
+
+			// 连缀可能出现的问题
+			// 如果用queue的话，后面就不会再执行，想再执行的话，就要加next
+			$(".button").click(function(){
+				$(".box").slideUp("slow").slideDown("slow").queue(function(next){  
+					$(this).css('background', 'yellow');
+					next();
+				}).hide("slow");		
+			})
+		})
+	</script>
+</head>
+<body>
+
+	<input type="button" value="animate" class="button"> 
+	<div style="background: red;width: 100px;height: 100px; position: absolute;" class="box"></div>
+	
+</body>
+</html>
